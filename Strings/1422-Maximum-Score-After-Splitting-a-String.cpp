@@ -1,3 +1,4 @@
+ //Happy New year - my very first question of 2025
  int maxScore(string s) {
         int n = s.length();
         int result = INT_MIN;
