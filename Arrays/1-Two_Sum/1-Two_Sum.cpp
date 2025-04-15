@@ -14,11 +14,12 @@ vector<int> twoSum(vector<int>& nums, int target) {
 
 
 //Better Approach
-//Time Complexity - O(N)
+//Time Complexity - O(N), Each map lookup and insert is average-case O(1),  
+//In rare worst-case (due to hash collisions), map operations can degrade to O(n) per op, but in practice, it's very fast
 //Space Complexity - O(N)
 
 vector<int> twoSum(vector<int>& nums, int target) {
-    map<int, int> mp;
+    unordered_map<int, int> mp;
     for(int i = 0; i < nums.size(); i++){
        int numToFind = target - nums[i];
        if(mp.find(numToFind) != mp.end()) return {mp[numToFind], i};
